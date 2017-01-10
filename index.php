@@ -61,7 +61,7 @@
 				<div class="intro col-xs-12">
 					<p>My name is Aaron Zame and i'm a Freelance Web Developer based in Taranaki NZ.</p>
 					<p>I provide web solutions for small business owners, from full website builds, custom web development, to basic site updates.</p>
-					<p>See my full list of services below,<br />got you covered from A-Z.</p>
+					<p>See my full list of services below, got you covered from A-Z.</p>
 				</div>
 			</div>
 		</div>
