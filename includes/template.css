@@ -481,6 +481,105 @@ ul.nav1 li ul > li a.contracting:before {
 	color: #000000;
 	padding-right: 0;
 }
+.position-wrapper {
+	margin-bottom: 40px;
+}
+.position-wrapper select {
+	margin-bottom: 10px;
+}
+.salary-cap-wrapper {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.salary-cap {
+	font-weight: 700;
+	font-size: 24px;
+	float: right;
+}
+.counter-wrapper {
+	font-weight: 700;
+}
+.refresh-wrapper {
+	text-align: center;
+}
+.promo {
+	background-color: #222222;
+	color: #ffffff;
+	padding: 40px 0px 30px !important;
+}
+.promo ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 600px;
+	display: inline-block;
+}
+.promo ul li {
+	display: inline-block;
+	text-align: left;
+	text-transform: uppercase;
+	position: relative;
+	margin-bottom: 20px;
+	font-family: 'Montserrat', sans-serif;
+	padding-left: 50px;
+}
+.promo ul li span {
+	background-color: #cccccc;
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	z-index: 1;
+	left: 0px;
+	top: -4px;
+	display: inline-block;
+}
+.promo ul li:before {
+	font-family: FontAwesome;
+	font-size: 18px;
+	color: #222222;
+	position: absolute;
+	z-index: 2;
+	left:5px;
+}
+.promo ul li.ws:before {
+	content: "\f108";
+}
+.promo ul li.cd:before {
+	content: "\f121";
+	top: -2px;
+}
+.promo ul li.rrf:before {
+	content: "\f10b";
+	font-size: 24px;
+	left: 10px;
+	top: -1px;
+}
+.promo ul li.sm:before {
+	content: "\f085";
+}
+.promo ul li.wh:before {
+	content: "\f0ac";
+	left: 7px;
+	top: -2px;
+}
+.promo ul li.c:before {
+	content: "\f0c0";
+}
+.promo h2 {
+	color: #ff7f00;
+	margin-bottom: 20px !important;
+}
+.promo p {
+	font-family: 'Special Elite', cursive;
+	font-size: 20px;
+}
+.teampicker-footer {
+	border-top: 1px solid #666666;
+}
+.site-link {
+	font-family: 'Montserrat', sans-serif;
+}
 .ani-in {
     backface-visibility: hidden;
     opacity: 0;
@@ -624,6 +723,9 @@ ul.nav1 li ul > li a.contracting:before {
 	}	
 	.dl-menu {
 		background-color: #ffffff;
+	}
+	.promo ul {
+		width: 90%;
 	}
 }
 @media screen and (max-width: 400px) {

@@ -6,6 +6,7 @@ $(document).ready(function(){
 		$("#full_name").focus();
 	});
 	$('#dl-menu').dlmenu();
+
 });
 
 function contactAZ(form) {
@@ -15,5 +16,32 @@ function contactAZ(form) {
                 $(".cta-form-success").fadeIn();
             });
         }
+    });
+}
+
+function updateSalary(form) {
+	var id = $(form).val();
+	var salary = $("#remaining-salary").val();
+    $.ajax({
+        url:'?ajax=update_salary&id='+id+'&salary='+salary,
+        async: false,
+        success: function(response){
+        	var data = response.split('|');
+        	$(".salary-cap span").text(data[0]);
+            $("#remaining-salary").val(data[0]);
+            $(".counter-wrapper span").text(data[1]);
+        }
+
+    });
+}
+
+function reset_nrlSession() {
+    $.ajax({
+        url:'?ajax=reset_session',
+        async: false,
+        success: function(response){
+
+        }
+
     });
 }

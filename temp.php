@@ -32,7 +32,37 @@
 				<div class="col-xs-12 col-sm-6 col-md-2 service-wrapper"><a href="/services/contracting/"><span class="fa fa-users"></span><h3>Contracting</h3></a></div>												
 			</div>
 		</div>
-	</section>			
+	</section>
+    <section id="cta" class="promo">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>A-Z Web Solutions</h2>
+                    <p>The home of web solutions for small business owners</p>
+                    <ul>
+                        <li class="col-xs-12 col-sm-6 ws"><span></span>Websites</li>
+                        <li class="col-xs-12 col-sm-6 cd"><span></span>Custom Development</li>
+                        <li class="col-xs-12 col-sm-6 rrf"><span></span>RWD Retro Fits</li>
+                        <li class="col-xs-12 col-sm-6 sm"><span></span>Site Maintenance</li>
+                        <li class="col-xs-12 col-sm-6 wh"><span></span>Web Hosting</li>
+                        <li class="col-xs-12 col-sm-6 c"><span></span>Contracting</li>
+                    </ul>
+                    <a href="http://www.azwebsolutions.co.nz" class="site-link">www.azwebsolutions.co.nz</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Want to establish an online presence?</h2>
+                    <p>Contact me for a free no-obligation quote</p>
+                    <a href="/#contact" class="btn btn-default" target="_blank">Go</a>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>	
 <script src="/includes/template.js?<?=strtotime('now')?>"></script>
 <script src="/includes/dlmenu.js"></script>

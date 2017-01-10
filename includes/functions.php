@@ -63,7 +63,7 @@ function nav($mobile = false) {
 		<li ' . $class1 . '><a href="/">Home</a></li>
 		<li ' . $class . '>
 			<a href="javascript:;">Services</a>
-			<ul class="' . $submenuClass . '" ' . $mobile_stuff . '>
+			<ul class="' . $submenu_class . '" ' . $mobile_stuff . '>
 				<li ' . $mobile_stuff . '><a href="/services/websites/" class="web" ' . $mobile_stuff . '>Websites</a></li>
 				<li ' . $mobile_stuff . '><a href="/services/custom-web-development/" class="custom" ' . $mobile_stuff . '>Custom Development</a></li>
 				<li ' . $mobile_stuff . '><a href="/services/rwd-retro-fits/" class="rwd" ' . $mobile_stuff . '>RWD Retro Fits</a></li>
@@ -89,4 +89,58 @@ function breadcrumb($service) {
 	</ul>';
 	
 	return $html;	
+}
+
+function getPlayersByPosition($position) {
+    $players = array();
+    $sql = '
+    SELECT    id
+    FROM      players
+    WHERE     position1 = "' . $position . '"
+    OR        position2 = "' . $position . '"
+    ORDER BY  price DESC, name ASC';
+    $result = db_query($sql);
+    while ($row = mysqli_fetch_assoc($result)) {
+        $players[] = new Player($row['id']);
+    }
+
+    return $players;
+}
+
+function playerSelector($title, $name, $position) {
+    $html = '
+    <select name="' . $name . '" style="width:100%;" onChange="updateSalary(this);" class="players-list">
+        <option value = "0|' . $name . '">' . $title . '</option>';
+        foreach(getPlayersByPosition($position) as $player) {
+            if(isset($_SESSION['nrl'][$name]) && $_SESSION['nrl'][$name] == $player->id) {
+                $selected = 'selected="selected"';
+            } else {
+                $selected = '';
+            }
+            $option_value = $player->get('name') . '(' . $player->get('team') . ') - $' . $player->get('price');
+            $html .= '<option value="' . $player->id . '|' . $name . '" ' . $selected . '>' . $option_value . '</option>';
+        }
+        $html .= '
+    </select>';
+    return $html;
+}
+
+function counter() {
+    if(isset($_SESSION['nrl'])) {
+        return count($_SESSION['nrl']);
+    } else {
+        return 0;
+    }
+}
+
+function getSalary() {
+    $salary = 7000000;
+    if(isset($_SESSION['nrl'])) {
+        foreach($_SESSION['nrl'] as $id) {
+            $player = new Player($id);
+            $salary = ($salary - $player->get('price'));
+        }
+    }
+
+    return $salary;
 }
