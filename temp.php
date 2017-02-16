@@ -15,6 +15,9 @@
 	<script type="text/javascript" src="/includes/jquery.js"></script>
 </head>
 <body>
+<div class="logo-temp">
+    <span>A-Z</span>
+</div>
 <div class="service-template temp">
 	<section id="services">
 		<div class="container">

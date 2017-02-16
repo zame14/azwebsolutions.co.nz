@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800');
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #333333;
+    font-size: 18px;
+    line-height: 26px;
+    background-color: #eeeeee;
+    font-weight:400;
+}
+a:hover {
+    text-decoration: none;
+}
+.container {
+    width: 1150px;
+    padding-left: 14px;
+    padding-right: 14px;
+    background-color: #ffffff;
+}
+ul.nav1 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul.nav1 li {
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+ul.nav1 li:last-child {
+    margin-right: 0;
+}
+ul.nav1 li a {
+    text-transform: uppercase;
+    color: #666666;
+    font-size: 16px;
+}
+ul.nav1 li.search a {
+    color: #ff7f00;
+}
+ul.nav1 li.search {
+    position: relative;
+    margin-left: 20px;
+}
+ul.nav1 li.search:before {
+    content: "\f002";
+    position: absolute;
+    font-family: FontAwesome;
+    color: #ff7f00;
+    font-size: 14px;
+    left: -19px;
+}
+ul.nav1 li.navPage > a {
+    color: #333333;
+}
+ul.nav1 li a:hover {
+    color: #ff7f00;
+}
+ul.nav1 li ul {
+    display: none;
+    position: absolute;
+    padding: 40px 20px 20px;
+    background-color: #eeeeee;
+    left: -20px;
+    width: auto;
+    white-space:nowrap;
+    z-index:99;
+}
+ul.nav1 li:hover > ul {
+    display: block;
+}
+ul.nav1 li ul > li {
+    margin: 0;
+    display: block;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 15px;
+}
+#nav {
+    display: inline-block;
+    margin-top: 28px;
+    margin-right: 20px;
+    width: 100%;
+    position: relative;
+    z-index: 98;
+    text-align: right;
+}
+#dl-menu {
+    display: none;
+}
+#home-banner .banner-wrapper img {
+    width: 100%;
+    height: auto;
+}
+#home-banner .intro-wrapper {
+    background-color: #000000;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#home-banner .intro {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+}
+#header .container.add-padding {
+    padding-bottom: 30px;
+}
+#header .logo {
+    display: inline-block;
+    position: absolute;
+    z-index: 99;
+}
+#header {
+    position: relative;
+}
+#header .top-header {
+    padding: 10px 0;
+    border-bottom: 1px solid #f56b0b;
+    position: relative;
+    text-align: right;
+    margin-bottom: 20px;
+}
+#header .top-header a {
+    color: #f56b0b;
+    font-weight: 600;
+    display: inline-block;
+    padding-right: 14px;
+    position: relative;
+    padding-left: 20px;
+}
+#header .top-header a:before {
+    content: "\f095";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+#main .container.add-padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.category-panel img {
+    width: 100%;
+    height: auto;
+}
+.category-panel {
+    margin-bottom: 28px;
+}
+.category-panel a {
+    display: block;
+}
+.category-panel .title-wrapper {
+    background-color: #f56b0b;
+    text-align: center;
+    padding: 10px 0;
+}
+.category-panel .title-wrapper h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.home-template h1 {
+    color: #f56b0b;
+    margin: 0 0 20px 0;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+.odds-ends-wrapper .column-1 {
+    float:left;
+    width: 22.72%;
+    min-height: 1px;
+}
+.odds-ends-wrapper .column-2 {
+    float:left;
+    width: 77.28%;
+    min-height: 1px;
+}
+.odds-ends-wrapper img {
+    width: 100%;
+    height: auto;
+}
+.odds-ends-wrapper .image-4-wrapper {
+    width: 33.333%;
+    display: inline-block;
+}
+.odds-ends-wrapper .image-5-wrapper {
+    width: 66.666%;
+    display: inline-block;
+}
+.odds-ends-wrapper {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+}
+.odds-ends-wrapper .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #222222;
+    opacity: 0.8;
+    z-index: 1;
+    left: 0;
+}
+.odds-ends-wrapper .odds-cta-wrapper {
+    width: 50%;
+    text-align: center;
+    background-color: #000000;
+    padding: 80px 0;
+    position: absolute;
+    z-index: 2;
+    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    top: 50%;
+
+}
+.odds-ends-wrapper .odds-cta-wrapper p {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 22px;
+}
+.btn-default {
+    background-color: #035d10;
+    border-color: #035d10;
+}
+.btn-default:hover {
+    background-color: #026811;
+    border-color: #026811;
+}
+.odds-ends-wrapper .odds-cta-wrapper .btn {
+    margin-top: 10px;
+}
+#footer .container {
+    background-color: #363636;
+}
+#footer .container.add-padding {
+    margin-top: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#footer {
+    color: #e8e8e8;
+    font-size: 16px;
+}
+#footer .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#footer a {
+    color: #e8e8e8;
+}
+#footer h4 {
+    text-transform: uppercase;
+    color: #f56b0b;
+    font-size: 16px;
+}
+#footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#footer ul.footer-contact-details li {
+    padding-left: 30px;
+    position: relative;
+}
+#footer ul.footer-contact-details li.ph a:before {
+    position: absolute;
+    content: "\f095";
+    left: 0;
+    font-family: FontAwesome;
+}
+#footer ul.footer-contact-details li.email a:before {
+    position: absolute;
+    content: "\f003";
+    left: 0;
+    font-family: FontAwesome;
+}
+#footer ul.footer-contact-details li.hrs:before {
+    position: absolute;
+    content: "\f017";
+    left: 0;
+    font-family: FontAwesome;
+}
+#footer ul.footer-menu li {
+    margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+}
+#footer ul.footer-menu li a:before {
+    position: absolute;
+    content: "\f013";
+    left: 0;
+    font-family: FontAwesome;
+}
+#footer ul li a:hover {
+    color: #ffffff;
+}
+.facebook-feed-wrapper ul {
+    width: 100%;
+}
+.facebook-feed-wrapper ul li {
+    display: inline-block;
+    margin: 0 5px 2px;
+    width: 31.1%;
+    height: 70px;
+    overflow: hidden;
+}
+.facebook-link-wrapper {
+    padding-left: 8px;
+}
+.facebook-link-wrapper span {
+    padding-right: 10px;
+}
+#cta-main .cta-wrapper {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f56b0b;
+}
+#cta-main .cta-wrapper p {
+    margin: 0;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+}
+#cta-main .container.add-padding {
+    padding-top: 80px;
+}
+#footer .container.lower-footer {
+    background-color: #000000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#footer .container.lower-footer ul li {
+    display: inline-block;
+    font-size: 12px;
+}
+#footer .container.lower-footer .left-col ul li:first-child {
+    padding-right: 15px;
+    position: relative;
+}
+#footer .container.lower-footer .left-col ul li:first-child:after {
+    content: "|";
+    position: absolute;
+    right: 3px;
+}
+#footer .container.lower-footer .right-col {
+    text-align: right;
+}
+#footer .container.lower-footer .right-col ul li {
+    padding-right: 40px;
+    position: relative;
+}
+#footer .container.lower-footer .right-col ul li a:after {
+    content: "A-Z";
+    font-weight: 800;
+    background-color: #ff7f00;
+    padding: 5px;
+    position: absolute;
+    line-height: 12px;
+    right: 0;
+}

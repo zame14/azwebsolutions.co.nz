@@ -1,8 +1,8 @@
 <?php require_once('includes/header.php'); ?>
 <!DOCTYPE html>
 <head>
-<title>A-Z Web Solutions | Home</title>
-<meta name="description" content="The home of web solutions for small business owners, A-Z Web Solutions offers a number of web solutions to get you online quickly with quality, or to fix that jpb that isn't quite right." />
+<title>A-Z Web Solutions | Home of web solutions for small business owners</title>
+<meta name="description" content="The home of web solutions for small business owners, A-Z Web Solutions offers a number of web solutions, such as website design and development, and custom web development to get you online quickly with quality, or to fix that job that isn't quite right." />
 <meta name="keywords" content="" />
 <meta name="robots" content="<?=$robots?>" />
 <meta name="viewport" content="width=device-width; initial-scale=1" />

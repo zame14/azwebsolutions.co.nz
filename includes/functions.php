@@ -144,3 +144,58 @@ function getSalary() {
 
     return $salary;
 }
+
+
+function nav_burkhart($mobile = false) {
+    global $thisPage;
+    $main_class = 'class="nav1"';
+    $class = '';
+    $class1 = '';
+    $class2 = '';
+    $submenu_class = 'submenu';
+    $mobile_stuff = '';
+    if($thisPage == "/index.php") $class1 = 'class="navPage"';
+    if($thisPage == "/websites.php" || $thisPage == "/custom-web-development.php" || $thisPage == "/rwd-retro-fits.php" || $thisPage == "/site-maintenance.php" || $thisPage == "/hosting.php") $class = 'class="navPage"';
+    if($thisPage == "/contracting.php") $class2 = 'class="navPage"';
+    if($mobile) {
+        $submenu_class = '';
+        $mobile_stuff = 'aria-haspopup="true"';
+        $main_class = '';
+    }
+
+    $html = '
+	<ul ' . $main_class . '>
+		<li ' . $class1 . '><a href="/">Home</a></li>
+		<li ' . $class . '><a href="/">New Equipment</a></li>
+		<li ' . $class . '><a href="/">Used Equipment</a></li>
+		<li ' . $class . '><a href="/">Odds & Ends</a></li>	
+		<li ' . $class . '><a href="/">About Us</a></li>
+		<li ' . $class . '><a href="/">Contact Us</a></li>
+		<li class="search"><a href="javascript:;">Search</a></li>
+	</ul>';
+
+    return $html;
+}
+
+function facebook_feed() {
+    $FBpage = file_get_contents('https://graph.facebook.com/628079593954120/feed?access_token=416237291746252|ELVzlxEEclLl3uDlWpqhDTLn2fY');
+    //Interpret data with JSON
+    $FBdata = json_decode($FBpage);
+    //Loop through data for each news item
+    $count = 1;
+    $html = '
+    <div class="facebook-feed-wrapper">
+        <ul>';
+        foreach ($FBdata->data as $news ) {
+            if (!empty($news->message) && !empty($news->picture) && $count <= 6) {
+                $html .= '<li style="background: url(' . $news->picture . ')"></li>';
+                $count++;
+            }
+        }
+        $html .= '
+        </ul>
+    </div>
+    <p class="facebook-link-wrapper"><a href="https://www.facebook.com/Burkhart-Farm-Equipment-Ltd-628079593954120/" target="_blank"><span class="fa fa-facebook-square"></span> Follow us on Facebook</a></p>';
+
+    return $html;
+}
