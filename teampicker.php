@@ -47,8 +47,8 @@
     <main id="main" class="teampicker-wrapper">
         <div class="container">
             <div class="salary-cap-wrapper">
-                <div class="salary-cap">$<span><?=getSalary()?></span><input type="hidden" name="remaining-salary" id="remaining-salary" value="7000000" /></div>
-                <div class="counter-wrapper">Selected: <span><?=counter()?></span> of 25</div>
+                <div class="salary-cap">$<span><?=getSalary()?></span><input type="hidden" name="remaining-salary" id="remaining-salary" value="9400000" /></div>
+                <div class="counter-wrapper">Selected: <span><?=counter()?></span> of 21</div>
             </div>
             <div class="position-wrapper">
                 <div class="row">
@@ -58,7 +58,6 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-6"><?=playerSelector('Select HOK', 'hok1', 'HOK')?></div>
-                    <div class="col-xs-12 col-sm-6"><?=playerSelector('Select reserve HOK', 'hok2', 'HOK')?></div>
                 </div>
             </div>
             <div class="position-wrapper">
@@ -70,8 +69,6 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6"><?=playerSelector('Select FRF', 'frf1', 'FRF')?></div>
                     <div class="col-xs-12 col-sm-6"><?=playerSelector('Select FRF', 'frf2', 'FRF')?></div>
-                    <div class="col-xs-12 col-sm-6"><?=playerSelector('Select reserve FRF', 'frf3', 'FRF')?></div>
-                    <div class="col-xs-12 col-sm-6"><?=playerSelector('Select reserve FRF', 'frf4', 'FRF')?></div>
                 </div>
             </div>
             <div class="position-wrapper">
@@ -84,9 +81,6 @@
                     <div class="col-xs-12 col-sm-4"><?=playerSelector('Select 2RF', '2rf1', '2RF')?></div>
                     <div class="col-xs-12 col-sm-4"><?=playerSelector('Select 2RF', '2rf2', '2RF')?></div>
                     <div class="col-xs-12 col-sm-4"><?=playerSelector('Select 2RF', '2rf3', '2RF')?></div>
-                    <div class="col-xs-12 col-sm-4"><?=playerSelector('Select reserve 2RF', '2rf4', '2RF')?></div>
-                    <div class="col-xs-12 col-sm-4"><?=playerSelector('Select reserve 2RF', '2rf5', '2RF')?></div>
-                    <div class="col-xs-12 col-sm-4"><?=playerSelector('Select reserve 2RF', '2rf6', '2RF')?></div>
                 </div>
             </div>
             <div class="position-wrapper">
@@ -98,8 +92,6 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6"><?=playerSelector('Select HLF', 'hlf1', 'HLF')?></div>
                     <div class="col-xs-12 col-sm-6"><?=playerSelector('Select HLF', 'hlf2', 'HLF')?></div>
-                    <div class="col-xs-12 col-sm-6"><?=playerSelector('Select reserve HLF', 'hlf3', 'HLF')?></div>
-                    <div class="col-xs-12 col-sm-6"><?=playerSelector('Select reserve HLF', 'hlf4', 'HLF')?></div>
                 </div>
             </div>
             <div class="position-wrapper">
@@ -111,8 +103,6 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6"><?=playerSelector('Select CTR', 'ctr1', 'CTR')?></div>
                     <div class="col-xs-12 col-sm-6"><?=playerSelector('Select CTR', 'ctr2', 'CTR')?></div>
-                    <div class="col-xs-12 col-sm-6"><?=playerSelector('Select reserve CTR', 'ctr3', 'CTR')?></div>
-                    <div class="col-xs-12 col-sm-6"><?=playerSelector('Select reserve CTR', 'ctr4', 'CTR')?></div>
                 </div>
             </div>
             <div class="position-wrapper">
@@ -125,8 +115,20 @@
                     <div class="col-xs-12 col-sm-4"><?=playerSelector('Select WFB', 'wfb', 'WFB')?></div>
                     <div class="col-xs-12 col-sm-4"><?=playerSelector('Select WFB', 'wfb2', 'WFB')?></div>
                     <div class="col-xs-12 col-sm-4"><?=playerSelector('Select WFB', 'wfb3', 'WFB')?></div>
-                    <div class="col-xs-12 col-sm-6"><?=playerSelector('Select reserve WFB', 'wfb4', 'WFB')?></div>
-                    <div class="col-xs-12 col-sm-6"><?=playerSelector('Select reserve WFB', 'wfb5', 'WFB')?></div>
+                </div>
+            </div>
+            <div class="position-wrapper">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <b>Select Reserves</b>
+                    </div>
+                    <?php
+                    $n = '';
+                    for($i = 1; $i <= 8; $i++) {
+                        $n = 'res' . $i;
+                        echo '<div class="col-xs-12">' . playerSelector('Select reserve', $n, '') . '</div>';
+                    }
+                    ?>
                 </div>
             </div>
             <div class="refresh-wrapper">

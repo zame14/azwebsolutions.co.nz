@@ -46,7 +46,7 @@ a:hover, a:focus, a:active {
 .home-template #main {
 	background-color: #ff7f00;
 	color: #ffffff;
-	padding: 60px 0;
+	padding: 180px 0;
 	text-align: center;
 }
 #main .profile-image img {
@@ -64,7 +64,8 @@ a:hover, a:focus, a:active {
 }
 .bio-wrapper h1 {
 	margin-bottom: 0;
-	font-size: 40px;
+	font-size: 50px;
+	line-height: 60px;
 	font-weight: normal;
 }
 .bio-wrapper span {
@@ -103,7 +104,7 @@ a:hover, a:focus, a:active {
 .profile-image {
 	position: relative;
 	width: 300px;
-	display: inline-block;
+	display: none;
 	z-index: 1;
 }
 .profile-image a.fa-envelope {
@@ -605,6 +606,140 @@ ul.nav1 li ul > li a.contracting:before {
 	font-weight: 700;
 	display: inline-block;
 }
+.registrations label {
+	text-align: right;
+	display: inline-block;
+	font-weight:400;
+	width: 150px;
+	padding-right: 20px;
+}
+.registrations p {
+	text-align: center;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+.registrations input[type=text], .registrations select, .registrations input[type=email] {
+	width: 450px;
+	padding-left: 12px;
+	display: inline-block;
+}
+.registrations div {
+	margin-bottom: 15px;
+}
+.registrations input[type=text], .registrations select, .registrations input[type=email] {
+	height: 34px;
+}
+#main.registrations {
+	padding-top: 50px;
+}
+.registrations form {
+	text-align: center;
+}
+.registrations .submit-wrapper {
+	margin-top: 40px;
+}
+.registrations .alert-success {
+	padding: 50px 0;
+}
+.mvp {
+	padding-top:30px;
+}
+.mvp .submit-wrapper {
+	text-align: center;
+}
+.mpv-wrapper {
+	margin-top: 20px;
+}
+.mpv-wrapper h2 {
+	font-size: 20px;
+}
+#footer.alt {
+	background-color: #ff7f00;
+}
+#footer.alt .copy {
+	color: #FFFFFF;
+}
+.players-wrapper {
+	margin-top: 50px;
+}
+.players-wrapper .intro-wrapper {
+	margin-bottom: 30px;
+}
+.players-wrapper .intro-wrapper p {
+	font-weight: bold;
+	text-align: center;
+}
+.players-wrapper .player img {
+	width: 100%;
+	height: auto;
+}
+.players-wrapper .player {
+	position: relative;
+	margin-bottom: 50px;
+	text-align: center;
+}
+.players-wrapper .player:hover {
+	cursor: pointer;
+}
+.players-wrapper .player:hover img{
+	opacity: 0.8;
+}
+.players-wrapper .player .name-wrapper {
+	background-color: #000000;
+	padding: 10px 0;
+}
+.players-wrapper .player .details-wrapper {
+	padding: 20px 10px;
+	background-color: #e3e3e3;
+	text-transform: uppercase;
+	font-size: 12px;
+	text-align: left;
+	font-weight: 600;
+}
+.players-wrapper .player .image-wrapper {
+	background-color: #ffffff;
+}
+.players-wrapper .player .name-wrapper span {
+	color: #ffffff;
+	font-weight: 700;
+}
+#playerModal {
+	background-color: rgba(0,0,0,0.8);
+}
+#playerModal .modal-content {
+	padding: 20px;
+}
+#playerModal .modal-content .fa-times {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 99;
+}
+#playerModal .modal-content .fa-times:hover {
+	cursor: pointer;
+}
+#playerModal .image-wrapper {
+	display: inline-block;
+	vertical-align: top;
+	padding-right: 15px;
+}
+#playerModal .image-wrapper img {
+	width: 150px;
+	height: auto;
+}
+#playerModal .player-details-wrapper {
+	display: inline-block;
+	vertical-align: top;
+}
+#playerModal .player-details-wrapper .details-wrapper {
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 18px;
+	padding-top: 5px;
+}
+.price-table th, .price-table td {
+	font-size: 14px;
+}
 /*tablet*/
 @media screen and (max-width: 979px) {
 	.container {
@@ -741,6 +876,19 @@ ul.nav1 li ul > li a.contracting:before {
 	}
 	.promo ul {
 		width: 90%;
+	}
+	.registrations label {
+		text-align: left;
+		display: block;
+		width: 100%;
+	}
+	.registrations input[type=text], .registrations select, .registrations input[type=email] {
+		width: 100%;
+		display: block;
+	}
+	.bio-wrapper h1 {
+		font-size: 30px;
+		line-height: 40px;
 	}
 }
 @media screen and (max-width: 400px) {

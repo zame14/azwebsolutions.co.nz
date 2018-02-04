@@ -1,0 +1,597 @@
+body {
+    font-family: 'Cabin', sans-serif;
+    color: #333333;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+p {
+    margin-bottom: 8px;
+}
+a {
+    text-decoration: none;
+    color: #ff7f00;
+}
+a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: #fe5900;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.header {
+    background-color: #ff7f00;
+    color: #ffffff;
+    padding: 180px 0;
+    text-align: center;
+    position: relative;
+}
+.header .logo {
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50px;
+    top: 20px;
+}
+.header .logo .s1 {
+    background-color: #fe5900;
+    padding: 5px;
+}
+.header .logo .s2 {
+    background-color: #333333;
+    padding: 5px;
+}
+.bio-wrapper h1 {
+    margin-bottom: 0;
+    font-size: 100px;
+    line-height: 110px;
+    font-weight: normal;
+    font-family: 'Cabin', sans-serif;
+}
+.bio-wrapper span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-family: 'Cabin', sans-serif;
+}
+.bio-wrapper ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 50px;
+}
+.bio-wrapper ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.bio-wrapper ul li a {
+    color: #ffffff;
+    font-size: 30px;
+}
+.intro p {
+    margin-bottom: 2px;
+    font-size: 26px;
+    line-height: 34px;
+    font-family: 'Cabin', sans-serif;
+}
+.projects {
+    padding-top: 80px;
+    padding-bottom: 85px;
+}
+.projects .project-list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+.projects .project-list ul li {
+    display: inline-block;
+    width: 32%;
+    vertical-align: top;
+    position: relative;
+}
+.projects .project-list img {
+    max-width: 100%;
+    height: auto;
+}
+.projects .project-list h3 {
+    display: block;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    line-height: 40px;
+}
+.why-me {
+    background-color: #eeeeee;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.why-me h2 {
+    font-family: 'Special Elite', cursive;
+}
+.why-me p {
+    text-align: center;
+    font-size:24px;
+    line-height: 32px;
+    font-family: 'Special Elite', cursive;
+    margin-bottom: 30px;
+}
+.contracting {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+.contracting h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+}
+.contracting p {
+    font-family: 'Montserrat', sans-serif;
+}
+#contact-cta {
+    position: relative;
+    background-color: #222222;
+    padding-bottom: 50px;
+}
+#contact-cta .cta-wrapper {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+}
+#contact-cta .cta-image {
+    padding-top: 50px;
+}
+#contact-cta .cta-image img {
+    width: 100%;
+    height: auto;
+}
+#contact-cta .cta-form {
+    text-align:center;
+    padding: 50px 0 0;
+}
+#contact-cta .cta-form h3 {
+    color: #ff7f00;
+    text-transform:uppercase;
+}
+#contact-cta .cta-form label {
+    text-align: left;
+    color: #ffffff;
+    display:block;
+    font-weight:400;
+}
+#contact-cta .cta-form p {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+#contact-cta .cta-form input[type=text], #contact-cta .cta-form textarea, #contact-cta .cta-form select, #contact-cta .cta-form input[type=email] {
+    width: 100%;
+    padding-left: 12px;
+}
+#contact-cta .cta-form div {
+    margin-bottom: 15px;
+}
+#contact-cta .cta-form textarea {
+    height: 180px;
+}
+#contact-cta .cta-form input[type=text], #contact-cta .cta-form select, #contact-cta .cta-form input[type=email] {
+    height: 34px;
+}
+.btn-primary {
+    background-color: #fe5900;
+    border-color: #fe5900;
+}
+.btn {
+    font-weight: 700;
+    font-size: 18px;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background-color: #ff7f00;
+    border-color: #ff7f00;
+}
+#contact-cta .cta-form .btn {
+    width: 230px;
+}
+.cta-form-success {
+    display: none;
+    padding-top: 50px;
+    text-align:center;
+}
+.cta-form-success h3 {
+    color: #ff7f00;
+    text-transform:uppercase;
+}
+.cta-form-success img {
+    width: 400px;
+    height: auto;
+}
+.cta-form-success p {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+#footer {
+    padding: 20px 0;
+    background-color: #eeeeee;
+    text-align: center;
+}
+#footer .copy {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.pt-page-2 #main {
+    top: 0;
+    position: absolute;
+    width: 100%;
+}
+.pt-page-2 .header {
+    padding: 0;
+    height: 100px;
+    background-color: #ff7f00;
+}
+.pt-page-2 .header .logo {
+    top: 35px;
+}
+.pt-page-2 .banner-wrapper {
+    position: relative;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.pt-page-2 h1 {
+    margin: 0 0 20px;
+    color: #333333;
+    font-size: 30px;
+    line-height: 40px;
+    text-align:center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.pt-page-2 section {
+    background-color: #ffffff;
+}
+.pt-page-2 .project {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #eeeeee;
+}
+.pt-page-2 .project ul.tags {
+    list-style: none;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+.pt-page-2 .project ul.tags li {
+    display: inline-block;
+    margin-right: 5px;
+    color: #0073C6;
+    font-size: 16px;
+}
+.pt-page-2 .project ul.tags li span {
+    margin-right: 5px;
+    font-size: 16px;
+}
+.pt-page-2 .testimonial {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+.pt-page-2 .testimonial p {
+    font-family: 'Satisfy', cursive;
+    font-size: 30px;
+    line-height: 40px;
+}
+.pt-page-2 .testimonial p span {
+    font-weight: 700;
+    color: #333333;
+    font-size: 20px;
+}
+.pt-page-2 .testimonial h2 {
+    font-size: 24px;
+    line-height: 34px;
+}
+.pt-page-2 p {
+    font-family: 'Montserrat', sans-serif;
+    color: #666666;
+}
+.pt-perspective {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 1200px;
+    transform-style: preserve-3d;
+}
+
+.pt-page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+}
+.close-me {
+    color: #333333;
+    display: inline-block;
+}
+.close-button-wrapper {
+    margin-top: 100px;
+    text-align: center;
+}
+.close-me:hover {
+    color: #333333;
+    cursor: pointer;
+}
+.close-button-wrapper-xs {
+    display: none;
+}
+.close-button-wrapper span {
+    content: "\f106";
+    font-family: FontAwesome;
+    display: block;
+    font-size: 30px;
+}
+.pt-page-current,
+.no-js .pt-page {
+    visibility: visible;
+}
+
+.no-js body {
+    overflow: auto;
+}
+
+.pt-page-ontop {
+    z-index: 999;
+}
+
+/* move from / to  */
+
+.pt-page-moveToLeft {
+    -webkit-animation: moveToLeft .6s ease both;
+    animation: moveToLeft .6s ease both;
+}
+
+.pt-page-moveFromLeft {
+    -webkit-animation: moveFromLeft .6s ease both;
+    animation: moveFromLeft .6s ease both;
+}
+
+.pt-page-moveToRight {
+    -webkit-animation: moveToRight .6s ease both;
+    animation: moveToRight .6s ease both;
+}
+
+.pt-page-moveFromRight {
+    -webkit-animation: moveFromRight .6s ease both;
+    animation: moveFromRight .6s ease both;
+}
+
+.pt-page-moveToTop {
+    -webkit-animation: moveToTop .6s ease both;
+    animation: moveToTop .6s ease both;
+}
+
+.pt-page-moveFromTop {
+    -webkit-animation: moveFromTop .6s ease both;
+    animation: moveFromTop .6s ease both;
+}
+
+.pt-page-moveToBottom {
+    -webkit-animation: moveToBottom .6s ease both;
+    animation: moveToBottom .6s ease both;
+}
+
+.pt-page-moveFromBottom {
+    -webkit-animation: moveFromBottom .6s ease both;
+    animation: moveFromBottom .6s ease both;
+}
+/* move from / to  */
+
+@-webkit-keyframes moveToLeft {
+    from { }
+    to { -webkit-transform: translateX(-100%); }
+}
+@keyframes moveToLeft {
+    from { }
+    to { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+}
+
+@-webkit-keyframes moveFromLeft {
+    from { -webkit-transform: translateX(-100%); }
+}
+@keyframes moveFromLeft {
+    from { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+}
+
+@-webkit-keyframes moveToRight {
+    from { }
+    to { -webkit-transform: translateX(100%); }
+}
+@keyframes moveToRight {
+    from { }
+    to { -webkit-transform: translateX(100%); transform: translateX(100%); }
+}
+
+@-webkit-keyframes moveFromRight {
+    from { -webkit-transform: translateX(100%); }
+}
+@keyframes moveFromRight {
+    from { -webkit-transform: translateX(100%); transform: translateX(100%); }
+}
+
+@-webkit-keyframes moveToTop {
+    from { }
+    to { -webkit-transform: translateY(-100%); }
+}
+@keyframes moveToTop {
+    from { }
+    to { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+}
+
+@-webkit-keyframes moveFromTop {
+    from { -webkit-transform: translateY(-100%); }
+}
+@keyframes moveFromTop {
+    from { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+}
+
+@-webkit-keyframes moveToBottom {
+    from { }
+    to { -webkit-transform: translateY(0%); }
+}
+@keyframes moveToBottom {
+    from { }
+    to { -webkit-transform: translateY(0%); transform: translateY(0%); }
+}
+
+@-webkit-keyframes moveFromBottom {
+    from { -webkit-transform: translateY(0%); }
+}
+@keyframes moveFromBottom {
+    from { -webkit-transform: translateY(0%); transform: translateY(0%); }
+}
+@media screen and (max-width: 991px) {
+    .container {
+        width: 100%;
+    }
+}
+@media (min-width: 576px) and (max-width: 991px) {
+    .bio-wrapper h1 {
+        font-size: 80px;
+        line-height: 90px;
+    }
+    .intro p {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .header {
+        padding: 150px 0;
+    }
+    .projects {
+        padding-top: 50px;
+        padding-bottom: 55px;
+    }
+    .why-me {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .why-me p {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .contracting {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .pt-page-2 .testimonial {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .pt-page-2 .testimonial p {
+        font-size: 24px;
+        line-height: 34px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    h2 {
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .projects .project-list ul li {
+        width: 49%;
+    }
+    .bio-wrapper h1 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .pt-page-2 .feature-image-wrapper {
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 575px) {
+    body {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .header .logo {
+        left: 10px;
+    }
+    .bio-wrapper h1 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+    .bio-wrapper span {
+        font-size: 20px;
+    }
+    .bio-wrapper ul li a {
+        font-size: 20px;
+    }
+    .intro p {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .header {
+        padding: 100px 0;
+    }
+    h2 {
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 0;
+    }
+    .projects {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .projects .project-list ul li {
+        display: block;
+        width: 99%;
+    }
+    .projects .project-list ul li a {
+        display: block;
+    }
+    .why-me, .contracting, .pt-page-2 .testimonial {
+        padding: 30px 10px;
+    }
+    .why-me p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    #footer .copy {
+        font-size: 16px;
+    }
+    .bio-wrapper ul {
+        margin-bottom: 30px;
+    }
+    .pt-page-2 h1 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .pt-page-2 .testimonial p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .pt-page-2 .testimonial h2 {
+        margin-bottom: 20px;
+    }
+}

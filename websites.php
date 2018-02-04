@@ -27,7 +27,7 @@
 <body>
 <div class="service-template">
 	<header id="header">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12">
 					<a href="/" class="logo ani-in"><span class="s1">A-Z</span> <span class="s2">Web Solutions</span></a>
@@ -57,7 +57,7 @@
 					<p>The process of building a website can be long, cumbersome and time consuming. As a business owner, time and money is something of a commodity.</p>
 					<p>Being a freelance web developer means lower overheads and a more personable approach to your website development. You can expect fabulous service at a fraction of the cost of going to a bigger development company.</p>
 					<p>For a simplified and afforable web solution look no further than A-Z Web Solutions - "Got you covered from A-Z".</p>
-					<p>A-Z web solutions include:</p>
+					<p>A-Z Web Solutions include:</p>
 				</div>
 				<div class="col-xs-12 col-sm-4 website-option">
 					<h3>Static Site</h3>

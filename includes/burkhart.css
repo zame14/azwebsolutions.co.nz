@@ -78,7 +78,6 @@ ul.nav1 li ul > li {
 #nav {
     display: inline-block;
     margin-top: 28px;
-    margin-right: 20px;
     width: 100%;
     position: relative;
     z-index: 98;
@@ -365,3 +364,170 @@ ul.nav1 li ul > li {
     line-height: 12px;
     right: 0;
 }
+@media screen and (max-width: 1149px) {
+    .container {
+        width: 100%;
+    }
+}
+
+
+.slick-arrow{background-color:transparent; color: #999;}
+
+.product_meta, .sku_wrapper, .posted_in{
+    display: none;
+}
+
+.primrose-sow-hero-slide-content {
+    max-width: 1110px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.primrose-sow-hero-slide {
+    text-align: left;
+}
+.primrose-sow-hero-slide-content-inner {
+
+}
+.primrose-sow-hero-slide .primrose-sow-hero-slide-title {
+    font-size: 300%;
+    margin: 200px 0 0;
+    display: none;
+}
+
+#panel-393-1-0-0 .primrose-sow-masonry-grid .primrose-sow-masonry-grid-item .primrose-sow-masonry-grid-item-title {
+    font-size: 30px;
+}
+.so-panel {
+    margin-bottom: 20px !important;
+}
+#pg-393-0 {
+    margin-bottom: 0 !important;
+}
+.so-widget-primrose-sow-heading h2 {
+    padding-top: 50px;
+    margin-bottom: 30px;
+}
+#pg-393-2 > .panel-row-style {
+    padding: 0 !important;
+}
+#pg-393-1, #pl-393 .so-panel {
+    margin-bottom: 0px !important;
+}
+#panel-393-2-0-1 .woocommerce ul.products li.product {
+    margin-bottom: 0px !important;
+    padding: 5px;
+}
+#panel-393-2-0-1 .woocommerce ul.products li.product .woocommerce-loop-product__title {
+    bottom: 5px;
+}
+#panel-393-2-0-1 .woocommerce ul.products li.product a img {
+    margin-bottom: 0;
+}
+#panel-393-2-0-1 .woocommerce-page.columns-5 ul.products li.product, .woocommerce.columns-5 ul.products li.product {
+    width: 20%;
+}
+.footer-widgets-col-5 {
+    text-align: left !important;
+}
+.sandra-logo {
+    display: block;
+}
+.sandra-logo img {
+    width: 50px;
+}
+.ss-woo-categories {
+    display: none;
+}
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    padding: 0 5px;
+    margin-bottom:10px;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    display: inline-block;
+    background-color: rgba(255,255,255,0.7);
+    text-transform:uppercase;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.woocommerce ul.products li.product a img {
+    margin-bottom: 0;
+}
+.woocommerce ul.products li.product .price {
+    display:inline-block;
+    color: #666;
+}
+#panel-393-0-0-0 .primrose-sow-button {
+    text-transform: uppercase;
+    font-size: 300%;
+}
+#panel-393-0-0-0 .primrose-sow-buttons {
+    text-align:left !important;
+    margin-top: 200px;
+}
+.primrose-sow-heading span {
+    font-size: 14px;
+}
+.woocommerce ul.products li.product .price {
+    display: none;
+}
+.woocommerce .related ul.products li.product, .woocommerce .up-sells ul.products li.product {
+    width: 16%;
+}
+
+.woocommerce div.product form.cart .variations select{width:70%;}
+
+
+.video-wrapper {
+    position: absolute;
+    left: 0;
+    margin-top: 150px;
+}
+.video-wrapper iframe {
+    width: 100%;
+}
+.header-floating-logo {
+    max-width: 100%;
+    padding:5px;
+    height:100%;
+    margin: 0;
+}
+.header-floating-logo a {
+    display: block;
+    height: 100%;
+}
+.header-floating-logo img {
+    width: 70%;
+    max-height: unset;
+}
+#header-widget-area {
+    text-align: right;
+    margin-top: 20px;
+    display: none;
+}
+.woocommerce .chw-widget h2 {
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-right: 10px;
+    display:inline-block;
+}
+.woocommerce .chw-widget  .woo-multi-currency-wrapper {
+    display: inline-block;
+}
+.single-product #header-widget-area {
+    display: block;
+}
+.video-wrapper-mobile {
+    display: none;
+}
+@media screen and (max-width: 1023px) {
+    .video-wrapper {
+        display: none;
+    }
+    .video-wrapper-mobile {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+

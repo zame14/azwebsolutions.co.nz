@@ -27,7 +27,7 @@
 <body>
 <div class="service-template site-maintenance">
 	<header id="header">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12">
 					<a href="/" class="logo ani-in"><span class="s1">A-Z</span> <span class="s2">Web Solutions</span></a>

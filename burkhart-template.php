@@ -175,7 +175,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-5 facebook-col-outer-wrapper">
                     <div class="facebook-col-inner-wrapper">
-                        <h4>Latest from our Facebook page</h4>
+                        <h4>Latest pics from our Facebook page</h4>
                         <?=facebook_feed()?>
                     </div>
                 </div>
@@ -191,7 +191,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-6 right-col">
                     <ul>
-                        <li>Site by: <a href="http://www.azwebsolutions.co.nz">A-Z WEB SOLUTIONS LTD</a></li>
+                        <li>Website by: <a href="http://www.azwebsolutions.co.nz">A-Z WEB SOLUTIONS LTD</a></li>
                     </ul>
                 </div>
             </div>

@@ -13,7 +13,7 @@ function contactMe($service) {
 	$html = '
 	<div class="cta-form">
 		<a name="contact"></a>
-		<h3>Contact Me</h3>
+		<h3>Contact A-Z</h3>
 		<p>Fill in the form below to get in touch.</p>
 		<div class="form-wrapper">
 			<form method="post" action="' . $thisPage . '" onsubmit="contactAZ(this); return false;" id="Contact_Form" >
@@ -99,9 +99,26 @@ function getPlayersByPosition($position) {
     WHERE     position1 = "' . $position . '"
     OR        position2 = "' . $position . '"
     ORDER BY  price DESC, name ASC';
+
+    if($position == '') {
+        $sql = '
+        SELECT    id
+        FROM      players
+        ORDER BY  name ASC, price DESC';
+    }
     $result = db_query($sql);
     while ($row = mysqli_fetch_assoc($result)) {
         $players[] = new Player($row['id']);
+    }
+
+    return $players;
+}
+
+function getMvpPlayers() {
+    $players = Array();
+    $result = db_query('SELECT playerid FROM mvp_players ORDER BY name');
+    while ($row = mysqli_fetch_assoc($result)) {
+        $players[] = new mvpPlayer($row['playerid']);
     }
 
     return $players;
@@ -118,10 +135,28 @@ function playerSelector($title, $name, $position) {
                 $selected = '';
             }
             $option_value = $player->get('name') . '(' . $player->get('team') . ') - $' . $player->get('price');
+            if($position == '')  {
+                $option_value .= ' - ' . $player->get('position1');
+                if($player->get('position2') <> '') $option_value .= '/' . $player->get('position2');
+            }
+
             $html .= '<option value="' . $player->id . '|' . $name . '" ' . $selected . '>' . $option_value . '</option>';
         }
         $html .= '
     </select>';
+    return $html;
+}
+
+function teamSelector() {
+    $html = '
+    <select name="team">
+        <option value="Prems">Prems</option>
+        <option value="Seniors">Seniors</option>
+        <option value="2nd Grade">2nd Grade</option>
+        <option value="3rd Grade">3rd Grade</option>
+        <option value="4th Grade">4th Grade</option>
+    </select>';
+
     return $html;
 }
 
@@ -134,7 +169,7 @@ function counter() {
 }
 
 function getSalary() {
-    $salary = 7000000;
+    $salary = 9400000;
     if(isset($_SESSION['nrl'])) {
         foreach($_SESSION['nrl'] as $id) {
             $player = new Player($id);
@@ -195,7 +230,175 @@ function facebook_feed() {
         $html .= '
         </ul>
     </div>
-    <p class="facebook-link-wrapper"><a href="https://www.facebook.com/Burkhart-Farm-Equipment-Ltd-628079593954120/" target="_blank"><span class="fa fa-facebook-square"></span> Follow us on Facebook</a></p>';
+    <p class="facebook-link-wrapper"><a href="https://www.facebook.com/Burkhart-Farm-Equipment-Ltd-628079593954120/" target="_blank"><span class="fa fa-facebook-square"></span> Follow us</a></p>';
+
+    return $html;
+}
+
+function getNrlPlayers1() {
+    global $json_src;
+    $str = file_get_contents($json_src);
+    $json = json_decode($str, true);
+    $html = '
+    <select name="nrl_players">
+        <option value="">Select Player</option>';
+        foreach($json as $field => $value) {
+            $full_name = $value['first_name'] . ' ' . $value['last_name'];
+            $html .= '<option value="' . $value['id'] . '">' . $full_name . '</option>';
+        }
+    $html .= '</select>';
+
+    return $html;
+}
+
+function getNrlPlayers() {
+    global $json_src;
+    $str = file_get_contents($json_src);
+    $json = json_decode($str, true);
+
+    return $json;
+}
+
+function getNrlPlayerPic($id) {
+    return 'https://fantasy.nrl.com/assets/media/players/nrl/' . $id . '.png';
+}
+
+function getNrlPlayerPosition($pos_arr) {
+    $html = '';
+    foreach($pos_arr as $pos_id) {
+        if($html <> '') $html .= ' | ';
+        switch($pos_id) {
+            case 1:
+                $html .= 'HOK';
+                break;
+            case 2:
+                $html .= 'FRF';
+                break;
+            case 3:
+                $html .= '2RF';
+                break;
+            case 4:
+                $html .= 'HLF';
+                break;
+            case 5:
+                $html .= 'CTR';
+                break;
+            case 6:
+                $html .= 'WFB';
+                break;
+        }
+    }
+    return $html;
+}
+
+function getNrlTeam($id) {
+    $html = '';
+    switch($id) {
+        case 500021:
+            $html = 'Storm';
+            break;
+        case 500028:
+            $html = 'Sharks';
+            break;
+        case 500004:
+            $html = 'Titans';
+            break;
+        case 500032:
+            $html = 'Warriors';
+            break;
+        case 500022:
+            $html = 'Dragons';
+            break;
+        case 500001:
+            $html = 'Roosters';
+            break;
+        case 500010:
+            $html = 'Bulldogs';
+            break;
+        case 500014:
+            $html = 'Panthers';
+            break;
+        case 500005:
+            $html = 'Rabbitohs';
+            break;
+        case 500023:
+            $html = 'Tigers';
+            break;
+        case 500002:
+            $html = 'Sea Eagles';
+            break;
+        case 500003:
+            $html = 'Knights';
+            break;
+        case 500011:
+            $html = 'Broncos';
+            break;
+        case 500012:
+            $html = 'Cowboys';
+            break;
+        case 500013:
+            $html = 'Raiders';
+            break;
+        case 500031:
+            $html = 'Eels';
+            break;
+    }
+    return $html;
+}
+
+function playerDetailsPopup() {
+    $html = '
+    <div class="modal fade player-popup in" id="playerModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="loader"></div>
+                <div class="modal-content-wrapper">
+                    
+                </div>
+            </div>
+        </div>
+    </div>';
+
+    return $html;
+}
+function displayPoints($team) {
+    ($team == 1) ? $teamname = 'Veterans' : $teamname = 'Young Guns';
+    $sql = '
+    SELECT name, sum(points) as players_points
+    FROM mvp_players p
+    INNER JOIN mvp_points pt
+    ON p.playerid = pt.playerid
+    WHERE team = ' . $team . '
+    GROUP BY pt.playerid
+    ORDER BY sum(points) desc, name asc';
+    $html = '
+    <div class="mpv-wrapper">
+        <table class="table table-inverse">
+            <thead>
+                <tr>
+                    <th>' . $teamname . '</th>
+                    <th>Points</th>                
+                </tr>
+            </thead>
+            <tbody>';
+    $result = db_query($sql);
+    $total_points = 0;
+    while($row = mysqli_fetch_assoc($result)) {
+        $html .= '
+                <tr>
+                    <td>' . $row['name'] . '</td>
+                    <td>' . $row['players_points'] . '</td>
+                </tr>';
+        $total_points = (intval($total_points) + intval($row['players_points']));
+    }
+    $html .= '
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><strong>' . $total_points . '</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>';
 
     return $html;
 }
